@@ -188,9 +188,6 @@
     .form-textarea { resize: vertical; min-height: 100px; }
     .sent-notice { display: none; background: var(--rose-50); border: 1px solid var(--rose-300); color: var(--rose-deep); padding: 14px; border-radius: 14px; margin-top: 14px; text-align: center; font-weight: 500; }
 
-    .admin-secret-zone { margin-top: 30px; text-align: center; }
-    .admin-secret-btn { background: transparent; border: 1px dashed var(--rose-300); color: var(--text-muted); font-size: 0.75rem; padding: 6px 14px; border-radius: 20px; cursor: pointer; opacity: 0.6; }
-
     .floating-music-btn {
       position: fixed; bottom: 24px; right: 20px; z-index: 9999;
       background: rgba(255, 255, 255, 0.9); border: 1.5px solid var(--rose-300);
@@ -245,7 +242,7 @@
     </div>
   </div>
 
-  <!-- 4. MODAL QUẢN LÝ RIÊNG DÀNH CHO BẠN -->
+  <!-- 4. MODAL QUẢN LÝ RIÊNG DÀNH CHO BẠN (Mở bằng Ctrl + Shift + L) -->
   <div class="custom-modal-overlay" id="admin-modal">
     <div class="custom-modal-card" style="max-width: 600px; text-align: left;">
       <h3 class="modal-headline" style="text-align: center;">💌 Dữ Liệu Khách Mời &amp; Lời Chúc</h3>
@@ -273,7 +270,7 @@
           <p class="invitation-script">Trân trọng kính mời</p>
         </header>
 
-        <!-- Thẻ profile Tân Kỹ Sư (Ảnh avatar.jpg) -->
+        <!-- Thẻ profile Tân Kỹ Sư -->
         <section class="profile-card">
           <div style="flex-shrink: 0;">
             <img src="avatar.jpg" alt="Phí Đặng Hà Linh" class="avatar-circle">
@@ -321,31 +318,31 @@
           </div>
         </section>
 
-        <!-- SLIDER 10 ẢNH KỶ NIỆM (anh1.jpeg -> anh10.jpeg) -->
+        <!-- SLIDER 10 ẢNH KỶ NIỆM -->
         <section style="margin-bottom: 40px;">
           <h3 class="section-title">Kỷ Niệm Rực Rỡ</h3>
           <div class="slider-box" id="auto-slider">
-            <img src="anh1.jpeg" alt="Kỷ yếu 1" class="slider-img active" onerror="this.onerror=null; this.src='anh1.jpg';">
-            <img src="anh2.jpeg" alt="Kỷ yếu 2" class="slider-img" onerror="this.onerror=null; this.src='anh2.jpg';">
-            <img src="anh3.jpeg" alt="Kỷ yếu 3" class="slider-img" onerror="this.onerror=null; this.src='anh3.jpg';">
-            <img src="anh4.jpeg" alt="Kỷ yếu 4" class="slider-img" onerror="this.onerror=null; this.src='anh4.jpg';">
-            <img src="anh5.jpeg" alt="Kỷ yếu 5" class="slider-img" onerror="this.onerror=null; this.src='anh5.jpg';">
-            <img src="anh6.jpeg" alt="Kỷ yếu 6" class="slider-img" onerror="this.onerror=null; this.src='anh6.jpg';">
-            <img src="anh7.jpeg" alt="Kỷ yếu 7" class="slider-img" onerror="this.onerror=null; this.src='anh7.jpg';">
-            <img src="anh8.jpeg" alt="Kỷ yếu 8" class="slider-img" onerror="this.onerror=null; this.src='anh8.jpg';">
-            <img src="anh9.jpeg" alt="Kỷ yếu 9" class="slider-img" onerror="this.onerror=null; this.src='anh9.jpg';">
-            <img src="anh10.jpeg" alt="Kỷ yếu 10" class="slider-img" onerror="this.onerror=null; this.src='anh10.jpg';">
+            <img src="anh1.JPEG" alt="Kỷ yếu 1" class="slider-img active" onerror="this.onerror=null; this.src='anh1.jpg';">
+            <img src="anh2.JPEG" alt="Kỷ yếu 2" class="slider-img" onerror="this.onerror=null; this.src='anh2.jpg';">
+            <img src="anh3.JPEG" alt="Kỷ yếu 3" class="slider-img" onerror="this.onerror=null; this.src='anh3.jpg';">
+            <img src="anh4.JPEG" alt="Kỷ yếu 4" class="slider-img" onerror="this.onerror=null; this.src='anh4.jpg';">
+            <img src="anh5.JPEG" alt="Kỷ yếu 5" class="slider-img" onerror="this.onerror=null; this.src='anh5.jpg';">
+            <img src="anh6.JPEG" alt="Kỷ yếu 6" class="slider-img" onerror="this.onerror=null; this.src='anh6.jpg';">
+            <img src="anh7.JPEG" alt="Kỷ yếu 7" class="slider-img" onerror="this.onerror=null; this.src='anh7.jpg';">
+            <img src="anh8.JPEG" alt="Kỷ yếu 8" class="slider-img" onerror="this.onerror=null; this.src='anh8.jpg';">
+            <img src="anh9.JPEG" alt="Kỷ yếu 9" class="slider-img" onerror="this.onerror=null; this.src='anh9.jpg';">
+            <img src="anh10.JPEG" alt="Kỷ yếu 10" class="slider-img" onerror="this.onerror=null; this.src='anh10.jpg';">
           </div>
           <p class="single-photo-quote">"Cảm ơn tất cả mọi người vì tô thêm màu vào cuộc sống của mình ❤️"</p>
         </section>
 
-        <!-- FORM XÁC NHẬN THAM DỰ -->
+        <!-- FORM XÁC NHẬN THAM DỰ (Chỉ cần Tên) -->
         <section style="margin-bottom: 45px; max-width: 540px; margin-left: auto; margin-right: auto;">
           <h3 class="section-title">Xác Nhận Tham Dự</h3>
           <form id="rsvp-form">
             <div class="form-group">
               <label>Tên của bạn: *</label>
-              <input type="text" id="rsvp-name" class="form-input" placeholder="Tên của bạn..." required>
+              <input type="text" id="rsvp-name" class="form-input" placeholder="Nhập tên hoặc nickname..." required>
             </div>
             <div class="form-group">
               <label>Bạn sẽ ghé chung vui cùng mình vào khung giờ nào nè? *</label>
@@ -382,11 +379,6 @@
           <div id="gb-sent-notice" class="sent-notice">
             💖 Lời chúc của bạn đã được gửi riêng đến em Mặp rồi nè! Cảm ơn bạn rất nhiều!
           </div>
-
-          <!-- NÚT QUẢN LÝ DÀNH RIÊNG CHO BẠN -->
-          <div class="admin-secret-zone">
-            <button class="admin-secret-btn" id="btn-open-admin">🔒 Xem danh sách tham dự &amp; lưu bút (Chủ nhân)</button>
-          </div>
         </section>
 
       </div>
@@ -399,7 +391,7 @@
   </div>
 
   <script>
-    // 1. QUẢN LÝ NHẠC NỀN
+    // 1. NHẠC NỀN
     const bgAudio = document.getElementById('bg-audio');
     const musicBtn = document.getElementById('music-toggle-btn');
     const musicIcon = document.getElementById('music-icon');
@@ -408,7 +400,7 @@
     function startMusic() {
       isPlayingMusic = true;
       musicIcon.classList.add('music-spin');
-      bgAudio.play().catch(e => console.log("Chờ người dùng tương tác để bật audio:", e));
+      bgAudio.play().catch(e => console.log("Chờ tương tác để phát:", e));
     }
 
     musicBtn.addEventListener('click', () => {
@@ -432,7 +424,7 @@
       });
     }
 
-    // 3. MỞ PHONG BÌ & TỰ ĐỘNG CHUYỂN TIẾP
+    // 3. MỞ PHONG BÌ & TỰ ĐỘNG CHUYỂN
     const envelope = document.getElementById('envelope-interactive');
     const nickModal = document.getElementById('nickname-modal');
     const sweetModal = document.getElementById('sweet-modal');
@@ -452,7 +444,6 @@
       launchConfetti();
       startMusic();
 
-      // Đợi 1.8 giây cho người xem đọc câu ngọt ngào rồi tự lật mở thiệp
       setTimeout(() => {
         sweetModal.classList.remove('active');
         envelope.classList.add('is-opened');
@@ -493,7 +484,7 @@
     updateTimer();
     setInterval(updateTimer, 1000);
 
-    // 5. SLIDER TỰ ĐỘNG CHUYỂN 10 ẢNH
+    // 5. SLIDER TỰ ĐỘNG CHUYỂN ẢNH
     const slides = document.querySelectorAll('#auto-slider .slider-img');
     let curSlide = 0;
     setInterval(() => {
@@ -504,7 +495,7 @@
       }
     }, 3500);
 
-    // 6. FORM XÁC NHẬN THAM DỰ (RSVP)
+    // 6. FORM RSVP
     const rsvpForm = document.getElementById('rsvp-form');
     const rsvpNotice = document.getElementById('rsvp-sent-notice');
     rsvpForm.addEventListener('submit', (e) => {
@@ -543,7 +534,7 @@
       setTimeout(() => { gbNotice.style.display = 'none'; }, 5000);
     });
 
-    // 8. KHU VỰC QUẢN LÝ DÀNH CHO BẠN
+    // 8. BỘ QUẢN LÝ DỮ LIỆU BÍ MẬT
     const adminModal = document.getElementById('admin-modal');
     const adminBox = document.getElementById('admin-display-box');
     const tabRsvpBtn = document.getElementById('tab-rsvp-btn');
@@ -593,13 +584,16 @@
       renderAdminData();
     });
 
-    document.getElementById('btn-open-admin').addEventListener('click', () => {
-      renderAdminData();
-      adminModal.classList.add('active');
-    });
-
     document.getElementById('btn-close-admin').addEventListener('click', () => {
       adminModal.classList.remove('active');
+    });
+
+    // PHÍM TẮT BÍ MẬT DÀNH CHO BẠN: Nhấn tổ hợp Ctrl + Shift + L
+    window.addEventListener('keydown', (e) => {
+      if (e.ctrlKey && e.shiftKey && (e.key === 'L' || e.key === 'l')) {
+        renderAdminData();
+        adminModal.classList.add('active');
+      }
     });
 
     document.getElementById('btn-export-csv').addEventListener('click', () => {
