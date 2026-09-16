@@ -289,6 +289,11 @@
 
         <!-- Đồng hồ đếm ngược -->
         <section class="countdown-section">
+          <!-- Dòng ghim thời gian diễn ra -->
+           <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 18px; background: #ffffff; border: 1.5px solid var(--rose-300); border-radius: 30px; color: var(--rose-deep); font-size: 0.92rem; font-weight: 700; letter-spacing: 0.5px; box-shadow: 0 4px 12px rgba(230, 73, 128, 0.1); margin-bottom: 14px;">
+            <span>⏳</span> 9h00 Ngày 26 tháng 9 năm 2026
+           </div>
+
           <h3 class="section-title">Time To Shine</h3>
           <div class="timer-grid">
             <div class="timer-box"><div class="timer-num" id="timerDays">00</div><div class="timer-label">Ngày</div></div>
@@ -468,8 +473,8 @@
     btnSubmitAnswer.addEventListener('click', handleOpenFlow);
     nickInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') handleOpenFlow(); });
 
-    // 4. ĐẾM NGƯỢC (08:00 26/09/2026 UTC+7)
-    const targetDate = new Date('2026-09-26T08:00:00+07:00').getTime();
+    // 4. ĐẾM NGƯỢC (09:00 26/09/2026 UTC+7)
+    const targetDate = new Date('2026-09-26T09:00:00+07:00').getTime();
     function updateTimer() {
       const distance = targetDate - new Date().getTime();
       const d = document.getElementById('timerDays');
