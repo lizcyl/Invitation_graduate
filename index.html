@@ -343,30 +343,34 @@
           <p class="single-photo-quote">"Cảm ơn tất cả mọi người vì tô thêm màu vào cuộc sống của mình ❤️"</p>
         </section>
 
-        <!-- FORM XÁC NHẬN THAM DỰ -->
+        <!-- FORM XÁC NHẬN THAM DỰ (GỬI THẲNG VỀ EMAIL / GOOGLE SHEET) -->
         <section style="margin-bottom: 45px; max-width: 540px; margin-left: auto; margin-right: auto;">
           <h3 class="section-title">Xác Nhận Tham Dự</h3>
-          <form id="rsvp-form">
+          
+          <!-- THAY LINK FORMSPREE CỦA BẠN VÀO ACTION -->
+          <form id="rsvp-form" action="https://formspree.io/f/mrpbgpwa" method="POST">
             <div class="form-group">
               <label>Tên của bạn: *</label>
-              <input type="text" id="rsvp-name" class="form-input" placeholder="Tên của bạn..." required>
+              <input type="text" name="Ten_Khach" class="form-input" placeholder="Tên của bạn..." required>
             </div>
+            
             <div class="form-group">
               <label>Bạn sẽ ghé chung vui cùng mình vào khung giờ nào nè? *</label>
-              <select id="rsvp-time" class="form-select" required>
+              <select name="Khung_Gio" class="form-select" required>
                 <option value="Sáng (09:00 - 11:00) chụp ảnh cùng nhau">☀️ Buổi Sáng (09:00 - 11:00) chụp ảnh cùng nhau</option>
                 <option value="Chiều (14:00 - 17:00) xem lễ trao bằng">🎓 Buổi Chiều (14:00 - 17:00) xem lễ trao bằng</option>
                 <option value="Cả ngày luôn nè!">✨ Cả ngày luôn nè!</option>
                 <option value="Tiếc quá, mình bận mất rồi">😢 Tiếc quá, mình bận mất rồi</option>
               </select>
             </div>
-            <button type="submit" class="btn-pink-gradient">Xác nhận gửi cho Hà Linh 🌸</button>
+            
+            <button type="submit" id="rsvp-submit-btn" class="btn-pink-gradient">Xác nhận gửi cho Hà Linh 🌸</button>
           </form>
+          
           <div id="rsvp-sent-notice" class="sent-notice">
-            🎉 Rất mong được gặp bạn hôm đó nha!
+            🎉 Đã gửi xác nhận thành công! Rất mong được gặp bạn hôm đó nha!
           </div>
         </section>
-
         <!-- FORM LƯU BÚT BẢO MẬT -->
         <section style="max-width: 540px; margin: 0 auto;">
           <h3 class="section-title">Lưu bút...</h3>
@@ -504,24 +508,40 @@
       }
     }, 4000);
 
-    // 6. FORM XÁC NHẬN THAM DỰ (RSVP)
+    // 6. GỬI XÁC NHẬN THAM DỰ VỀ EMAIL / FORMSPREE
     const rsvpForm = document.getElementById('rsvp-form');
     const rsvpNotice = document.getElementById('rsvp-sent-notice');
-    rsvpForm.addEventListener('submit', (e) => {
+    const rsvpSubmitBtn = document.getElementById('rsvp-submit-btn');
+
+    rsvpForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const entry = {
-        name: document.getElementById('rsvp-name').value.trim(),
-        timeSlot: document.getElementById('rsvp-time').value,
-        guests: document.getElementById('rsvp-count').value,
-        created: new Date().toLocaleString('vi-VN')
-      };
-      const list = JSON.parse(localStorage.getItem('linh_rsvp_data') || '[]');
-      list.unshift(entry);
-      localStorage.setItem('linh_rsvp_data', JSON.stringify(list));
-      rsvpForm.reset();
-      rsvpNotice.style.display = 'block';
-      launchConfetti();
-      setTimeout(() => { rsvpNotice.style.display = 'none'; }, 5000);
+      rsvpSubmitBtn.innerText = 'Đang gửi... ⏳';
+      rsvpSubmitBtn.disabled = true;
+
+      const formData = new FormData(rsvpForm);
+
+      try {
+        const response = await fetch(rsvpForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          rsvpForm.reset();
+          rsvpForm.style.display = 'none'; // Ẩn form sau khi gửi
+          rsvpNotice.style.display = 'block';
+          launchConfetti();
+        } else {
+          alert('Có lỗi xảy ra khi gửi, bạn thử lại giúp mình nhé!');
+          rsvpSubmitBtn.innerText = 'Xác nhận gửi cho Hà Linh 🌸';
+          rsvpSubmitBtn.disabled = false;
+        }
+      } catch (err) {
+        alert('Lỗi kết nối mạng, vui lòng thử lại sau!');
+        rsvpSubmitBtn.innerText = 'Xác nhận gửi cho Hà Linh 🌸';
+        rsvpSubmitBtn.disabled = false;
+      }
     });
 
     // 7. FORM LƯU BÚT
