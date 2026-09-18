@@ -34,6 +34,317 @@
       line-height: 1.6;
     }
 
+    /* =========================================
+    DRESSCODE SECTION
+    ========================================= */
+    .dresscode-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 24px 20px;
+      border: 1px solid var(--rose-100);
+      box-shadow: 0 6px 16px rgba(230, 73, 128, 0.05);
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .dresscode-subtitle {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      font-style: italic;
+    }
+
+    .palette-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .color-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .color-circle {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      border: 2.5px solid #ffffff;
+      transition: transform 0.25s ease;
+    }
+
+    .color-circle:hover {
+      transform: translateY(-4px) scale(1.08);
+    }
+
+    .color-circle.c-white {
+      background: #ffffff;
+      border-color: #f1dfdf;
+    }
+
+    .color-circle.c-beige {
+      background: #f7ede2;
+      border-color: #edd6c0;
+    }
+
+    .color-circle.c-pink {
+      background: #ffd3df;
+      border-color: #fcc2d2;
+    }
+
+    .color-circle.c-blue {
+      background: #cfe8ff;
+      border-color: #b1d8fc;
+    }
+
+    .color-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-main);
+      letter-spacing: 0.5px;
+    }
+
+    /* =========================================
+    DRESSCODE SECTION
+    ========================================= */
+    .dresscode-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 32px 22px;
+      border: 1px solid var(--rose-100);
+      box-shadow: 0 8px 24px rgba(230, 73, 128, 0.06);
+      margin-bottom: 40px;
+    }
+
+    .dresscode-subtitle {
+      text-align: center;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    /* Palette bảng màu */
+    .palette-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px dashed var(--rose-200);
+    }
+
+    .color-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .color-circle {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      border: 2px solid #fff;
+    }
+
+    .color-circle.c-white { background: #ffffff; border-color: #f1dfdf; }
+    .color-circle.c-beige { background: #f7ede2; border-color: #edd6c0; }
+    .color-circle.c-pink { background: #ffd3df; border-color: #fcc2d2; }
+    .color-circle.c-blue { background: #cfe8ff; border-color: #b1d8fc; }
+
+    .color-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    /* Grid gợi ý từng nhóm */
+    .dresscode-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    @media (min-width: 600px) {
+      .dresscode-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .dc-box {
+      background: var(--rose-50);
+      border-radius: 18px;
+      border: 1px solid var(--rose-200);
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .dc-box-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--rose-deep);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .dc-desc {
+      font-size: 0.86rem;
+      color: var(--text-main);
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+
+    .dc-img-wrap {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border: 2px solid #ffffff;
+      background: #fff;
+    }
+
+    .dc-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* =========================================
+    GÓC DÀNH CHO BỐ & MẸ (CHIBI)
+    ========================================= */
+    .parents-special-card {
+      grid-column: 1 / -1;
+      background: linear-gradient(135deg, #fff9fb 0%, #fff0f5 100%);
+      border: 2px dashed var(--rose-300);
+      border-radius: 24px;
+      padding: 24px 16px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(230, 73, 128, 0.05);
+      margin-top: 10px;
+    }
+
+    .parents-header {
+      margin-bottom: 20px;
+    }
+
+    .parents-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--rose-deep);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .parents-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+      font-style: italic;
+    }
+
+    /* Lưới 4 chibi: 2 cột trên điện thoại, 4 cột trên máy tính */
+    .parents-chibi-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 650px) {
+      .parents-chibi-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .chibi-card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 14px 10px;
+      border: 1.5px solid var(--rose-100);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.25s ease;
+    }
+
+    .chibi-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .chibi-avatar-frame {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      border: 3px solid #ffffff;
+      box-shadow: 0 4px 10px rgba(230, 73, 128, 0.15);
+      overflow: hidden;
+    }
+
+    .chibi-avatar-frame.dad-mil-bg {
+      background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    }
+
+    .chibi-avatar-frame.dad-cas-bg {
+      background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    }
+
+    .chibi-avatar-frame.mom-aodai-bg {
+      background: linear-gradient(135deg, #ffeef2 0%, #ffd1dc 100%);
+    }
+
+    .chibi-avatar-frame.mom-dress-bg {
+      background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+    }
+
+    .chibi-avatar-frame svg {
+      width: 72px;
+      height: 72px;
+    }
+
+    .chibi-badge-tag {
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 5px;
+      white-space: nowrap;
+    }
+
+    .chibi-badge-tag.dad-mil { background: #2e7d32; color: #fff; }
+    .chibi-badge-tag.dad-cas { background: #1976d2; color: #fff; }
+    .chibi-badge-tag.mom-aodai { background: var(--rose-500); color: #fff; }
+    .chibi-badge-tag.mom-dress { background: #8e24aa; color: #fff; }
+
+    .chibi-note {
+      font-size: 0.75rem;
+      color: var(--text-main);
+      font-weight: 500;
+      line-height: 1.35;
+    }
+
     /* 1. MÀN HÌNH PHONG BÌ BAN ĐẦU */
     #envelope-screen {
       position: fixed; inset: 0; z-index: 999;
@@ -324,6 +635,180 @@
             <div style="font-size: 1.15rem; font-weight: 700; color: var(--rose-deep); margin: 6px 0;">Hội trường A1 – Học viện Công nghệ Bưu chính Viễn thông</div>
           </div>
         </section>
+
+        <!-- DRESSCODE -->
+        <section class="dresscode-card">
+          <h3 class="section-title">Dresscode Gợi Ý</h3>
+          <p class="dresscode-subtitle">Khách yêu có thể chọn những tone màu pastel nhẹ nhàng dưới đây để lên hình cùng mình xinh xắn nhất nhó ✨</p>
+          
+          <div class="palette-wrap">
+            <div class="color-item">
+              <div class="color-circle c-white"></div>
+              <span class="color-label">White</span>
+            </div>
+            
+            <div class="color-item">
+              <div class="color-circle c-beige"></div>
+              <span class="color-label">Beige</span>
+            </div>
+            
+            <div class="color-item">
+              <div class="color-circle c-pink"></div>
+              <span class="color-label">Pink Pastel</span>
+            </div>
+            
+            <div class="color-item">
+              <div class="color-circle c-blue"></div>
+              <span class="color-label">Light Blue</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- DRESSCODE GỢI Ý TRANG PHỤC -->
+        <section class="dresscode-card">
+          <h3 class="section-title">Dresscode Gợi Ý</h3>
+          <p class="dresscode-subtitle">Mọi người có thể chọn tone màu pastel nhẹ nhàng dưới đây để chúng mình có những tấm ảnh tone-sur-tone thật rực rỡ nhó ✨</p>
+          
+          <!-- Bảng màu mẫu -->
+          <div class="palette-wrap">
+            <div class="color-item">
+              <div class="color-circle c-white"></div>
+              <span class="color-label">Trắng</span>
+            </div>
+            <div class="color-item">
+              <div class="color-circle c-beige"></div>
+              <span class="color-label">Beige</span>
+            </div>
+            <div class="color-item">
+              <div class="color-circle c-pink"></div>
+              <span class="color-label">Hồng Pastel</span>
+            </div>
+            <div class="color-item">
+              <div class="color-circle c-blue"></div>
+              <span class="color-label">Xanh Nhạt</span>
+            </div>
+          </div>
+
+            <!-- KHUNG RIÊNG DÀNH CHO BỐ & MẸ (4 HÌNH CHIBI SVG) -->
+            <div class="parents-special-card">
+              <div class="parents-header">
+                <div class="parents-title"> Góc Tự Hào Của Bố &amp; Mẹ ❤️</div>
+              </div>
+
+              <div class="parents-chibi-grid">
+                
+                <!-- 1. Bố - Quân phục bộ đội -->
+                <div class="chibi-card">
+                  <div class="chibi-avatar-frame dad-mil-bg">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22 92C22 75 35 68 50 68C65 68 78 75 78 92" fill="#2d5a27"/>
+                      <path d="M42 68L50 82L58 68" fill="#c62828"/>
+                      <polygon points="50,71 52,76 57,76 53,79 55,84 50,81 45,84 47,79 43,76 48,76" fill="#fbc02d"/>
+                      <circle cx="50" cy="48" r="22" fill="#ffdfba"/>
+                      <path d="M40 47Q45 52 48 47" stroke="#492837" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                      <path d="M52 47Q55 52 60 47" stroke="#492837" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                      <circle cx="38" cy="53" r="3.5" fill="#ff8a80" opacity="0.6"/>
+                      <circle cx="62" cy="53" r="3.5" fill="#ff8a80" opacity="0.6"/>
+                      <path d="M46 55Q50 59 54 55" stroke="#492837" stroke-width="2" stroke-linecap="round" fill="none"/>
+                      <path d="M24 38C25 24 38 18 50 18C62 18 75 24 76 38Z" fill="#33691e"/>
+                      <ellipse cx="50" cy="38" rx="29" ry="5" fill="#254d15"/>
+                      <circle cx="50" cy="28" r="6" fill="#c62828"/>
+                      <polygon points="50,23 51.5,26.5 55,26.5 52,28.5 53.5,32 50,30 46.5,32 48,28.5 45,26.5 48.5,26.5" fill="#ffeb3b"/>
+                    </svg>
+                  </div>
+                  <span class="chibi-badge-tag dad-mil">Bố: Quân Phục</span>
+                  <p class="chibi-note">Trang trọng, oai phong &amp; ấm áp</p>
+                </div>
+
+                <!-- 2. Bố - Thường phục lịch thiệp -->
+                <div class="chibi-card">
+                  <div class="chibi-avatar-frame dad-cas-bg">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22 92C22 74 35 66 50 66C65 66 78 74 78 92" fill="#2c3e50"/>
+                      <polygon points="50,68 38,66 45,86 55,86 62,66" fill="#ffffff"/>
+                      <polygon points="48,70 52,70 53,88 50,92 47,88" fill="#e64980"/>
+                      <circle cx="50" cy="46" r="22" fill="#ffdfba"/>
+                      <path d="M28 42C28 26 40 20 50 20C62 20 72 26 72 40C68 32 58 30 50 32C42 30 33 34 28 42Z" fill="#2c1d11"/>
+                      <circle cx="42" cy="46" r="2.5" fill="#2c1d11"/>
+                      <circle cx="58" cy="46" r="2.5" fill="#2c1d11"/>
+                      <path d="M39 41Q43 39 46 41" stroke="#2c1d11" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+                      <path d="M54 41Q57 39 61 41" stroke="#2c1d11" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+                      <circle cx="38" cy="51" r="3.5" fill="#ff8a80" opacity="0.6"/>
+                      <circle cx="62" cy="51" r="3.5" fill="#ff8a80" opacity="0.6"/>
+                      <path d="M45 53Q50 58 55 53" stroke="#2c1d11" stroke-width="2" stroke-linecap="round" fill="none"/>
+                    </svg>
+                  </div>
+                  <span class="chibi-badge-tag dad-cas">Bố: Sơ Mi / Vest</span>
+                  <p class="chibi-note">Lịch thiệp, phong độ &amp; trẻ trung</p>
+                </div>
+
+                <!-- 3. Mẹ - Áo dài truyền thống -->
+                <div class="chibi-card">
+                  <div class="chibi-avatar-frame mom-aodai-bg">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <!-- Thân áo dài hồng phấn duyên dáng -->
+                      <path d="M25 92C25 72 38 67 50 67C62 67 75 72 75 92" fill="#ff8da1"/>
+                      <!-- Cổ áo dài đứng truyền thống -->
+                      <path d="M43 67C43 63 50 62 50 62C50 62 57 63 57 67" stroke="#e64980" stroke-width="3" fill="none"/>
+                      <!-- Hàng ngọc trai nhẹ trước ngực -->
+                      <circle cx="50" cy="71" r="1.8" fill="#fff"/>
+                      <circle cx="50" cy="76" r="1.8" fill="#fff"/>
+                      <circle cx="50" cy="81" r="1.8" fill="#fff"/>
+                      <!-- Khuôn mặt Mẹ phúc hậu -->
+                      <circle cx="50" cy="46" r="21" fill="#ffdfba"/>
+                      <!-- Mái tóc búi cao quý phái có kẹp hoa -->
+                      <path d="M26 44C26 25 38 18 50 18C62 18 74 25 74 44C71 35 62 30 50 30C38 30 29 35 26 44Z" fill="#3e2723"/>
+                      <ellipse cx="50" cy="17" rx="14" ry="7" fill="#3e2723"/>
+                      <!-- Kẹp hoa cài tóc -->
+                      <circle cx="61" cy="22" r="4" fill="#ff4081"/>
+                      <circle cx="61" cy="22" r="1.5" fill="#fff"/>
+                      <!-- Mắt cười hiền từ & hàng mi -->
+                      <path d="M41 46Q44 50 47 46" stroke="#3e2723" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                      <path d="M53 46Q56 50 59 46" stroke="#3e2723" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                      <path d="M47 45L49 43" stroke="#3e2723" stroke-width="1.5" stroke-linecap="round"/>
+                      <path d="M59 45L61 43" stroke="#3e2723" stroke-width="1.5" stroke-linecap="round"/>
+                      <!-- Má hồng & nụ cười tươi -->
+                      <circle cx="39" cy="51" r="3.5" fill="#ff80ab" opacity="0.7"/>
+                      <circle cx="61" cy="51" r="3.5" fill="#ff80ab" opacity="0.7"/>
+                      <path d="M46 54Q50 58 54 54" stroke="#d81b60" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                    </svg>
+                  </div>
+                  <span class="chibi-badge-tag mom-aodai">Mẹ: Áo Dài</span>
+                  <p class="chibi-note">Duyên dáng, truyền thống &amp; rạng rỡ</p>
+                </div>
+
+                <!-- 4. Mẹ - Váy dài thanh lịch -->
+                <div class="chibi-card">
+                  <div class="chibi-avatar-frame mom-dress-bg">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <!-- Váy xòe dài màu tím pastel/kem nhạt nhã nhặn -->
+                      <path d="M24 92C24 74 36 67 50 67C64 67 76 74 76 92" fill="#ba68c8"/>
+                      <!-- Cổ tim cách điệu kết hợp chuỗi ngọc -->
+                      <path d="M43 67L50 74L57 67" fill="#ffdfba"/>
+                      <path d="M42 66Q50 72 58 66" stroke="#fff" stroke-width="2" stroke-dasharray="2,2" fill="none"/>
+                      <!-- Khuôn mặt Mẹ -->
+                      <circle cx="50" cy="46" r="21" fill="#ffdfba"/>
+                      <!-- Tóc uốn sóng lọn mềm mại buông vai -->
+                      <path d="M26 44C26 24 38 18 50 18C62 18 74 24 74 44C70 33 60 28 50 28C40 28 30 33 26 44Z" fill="#3e2723"/>
+                      <path d="M26 44C24 54 28 64 30 68C32 64 30 54 30 46" fill="#3e2723"/>
+                      <path d="M74 44C76 54 72 64 70 68C68 64 70 54 70 46" fill="#3e2723"/>
+                      <!-- Mắt cười tươi & khuyên tai ngọc trai -->
+                      <circle cx="43" cy="46" r="2.2" fill="#3e2723"/>
+                      <circle cx="57" cy="46" r="2.2" fill="#3e2723"/>
+                      <circle cx="28" cy="49" r="2" fill="#fff"/>
+                      <circle cx="72" cy="49" r="2" fill="#fff"/>
+                      <!-- Má hồng & Nụ cười dịu dàng -->
+                      <circle cx="39" cy="51" r="3.5" fill="#f48fb1" opacity="0.7"/>
+                      <circle cx="61" cy="51" r="3.5" fill="#f48fb1" opacity="0.7"/>
+                      <path d="M46 54Q50 58 54 54" stroke="#8e24aa" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                    </svg>
+                  </div>
+                  <span class="chibi-badge-tag mom-dress">Mẹ: Váy Dài</span>
+                  <p class="chibi-note">Thanh lịch, trẻ trung &amp; quý phái</p>
+                </div>
+
+              </div>
+            </div>
 
         <!-- SLIDER 10 ẢNH KỶ NIỆM -->
         <section style="margin-bottom: 40px;">
